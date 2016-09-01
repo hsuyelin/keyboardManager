@@ -79,7 +79,7 @@
     _bgImageView.image = [UIImage imageNamed:@"BG3"];
     [self.view addSubview:_bgImageView];
     
-    _navControlButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x - 100, self.view.center.y - 25, 200, 50)];
+    _navControlButton = [[UIButton alloc] init];
     [_navControlButton setTitle:@"Hidden navigationBar" forState:UIControlStateNormal];
     _navControlButton.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:15.0f];
     _navControlButton.backgroundColor = [UIColor colorWithHexString:@"#F7941D"];
@@ -140,14 +140,14 @@
     if(UIInterfaceOrientationIsLandscape(orientation)) {
         _bgImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         _bgImageView.image = [UIImage imageNamed:@"BG3"];
-        
+        _navControlButton.frame = CGRectMake(self.view.center.x - 100, self.view.center.y - 25, 200, 50);
         _accountTextField.frame = CGRectMake((SCREEN_WIDTH - (SCREEN_WIDTH - 161 * 2)) / 2, 60.0f, SCREEN_WIDTH - 161 * 2, 44 * SCALE_HEIGHT_L);
         _pwdTextField.frame = CGRectMake((SCREEN_WIDTH - (SCREEN_WIDTH - 161 * 2)) / 2, SCREEN_HEIGHT - 44 * SCALE_HEIGHT_L - 50.0f, SCREEN_WIDTH - 161 * 2, 44 * SCALE_HEIGHT_L);
         
     }else {
         _bgImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         _bgImageView.image = [UIImage imageNamed:@"BG3"];
-        
+        _navControlButton.frame = CGRectMake(self.view.center.x - 100, self.view.center.y - 25, 200, 50);
         _accountTextField.frame = CGRectMake(15 * SCALE_WIDTH_P, 72.0f, SCREEN_WIDTH - 30 * SCALE_WIDTH_P, 44 * SCALE_HEIGHT_P);
         _pwdTextField.frame = CGRectMake(15 * SCALE_WIDTH_P, SCREEN_HEIGHT - 44 * SCALE_HEIGHT_P - 50.0f, SCREEN_WIDTH - 30 * SCALE_WIDTH_P, 44 * SCALE_HEIGHT_P);
         
